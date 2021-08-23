@@ -170,46 +170,47 @@
 %-------------------------------------------------------------------------------
 %	ACADEMIC PROJECTS SECTION
 %-------------------------------------------------------------------------------
-\begin{section}{Projects}
+\begin{section}{Projects}      
     \begin{project}
-        \title{SerDe based Inter-Process Communication (IPC) Framework} % VDM
-        \duration{Apr '14 - Present}
-        \description{
-          - Used in VDM \\
-          - Written in Rust lang (with safety) \\
-          - Unified FFI accesses for dynamic libraries for C/CPP and Rust and Libraries for Python \\
-          - Decoupled Design for 
-          % - Re-invented a two-pass \textit{deterministic} algorithm to find the median of large data-sets (approx. 1 TB)\\
-          % - The algorithm developed was similar to the one described in the \href{http://polylogblog.files.wordpress.com/2009/08/80munro-median.pdf}{paper} by Munro-Paterson (1980)\\
-          % - Carried out extensive tests to evaluate the performance of the algorithm\\
-          % - \href{https://drive.google.com/file/d/0B0--s-r8CTxgZTU3RzB3YnhMMVU/view}{Report}
-        }
-    \end{project}
-        
-    \begin{project}
-        \title{Manipulation of (Wireless) Network Stacks in Linux Kernel} %Netfilter + Netlink + mac80211
+        \title{Manipulation of Networking Stack in Linux Kernel} %Netfilter + Netlink + mac80211
         \duration{Oct '16 - Oct '18}
         \description{
-            % - A linux application for backing-up and syncing files between two or more peers\\
-            % - Users have a shared folder across different machines, with local copies. Changes made in any one copy are synced across all devices\\
-            % - Linux \emph{inotify} API used to track changes in the shared folder and \emph{rsync} used to sync the modifications to ensure efficient transfer\\
-            % - Multithreading with mutexes used to parallelize syncing and file-monitoring operations\\
-            % - \href{https://github.com/rbavishi/P2P-Dropbox}{Github Link}
+          - \cusemph{MAC Layer (L2)}: (\href{http://github.com/iamhyc/wlsops-hack}{Github Link})
+          \begin{itemize}
+            \item[--] This project aims at providing the fastest access to the wireless NIC driver from userspace.
+            % In fact, Linux mac80211 subsystem provides a set of APIs to monitor and modify the parameters related to IEEE 802.11 MAC design. The existing tools rely on either ``ioctl'' or ``genl'' which could not provide real-time and robust access to kernel driver.
+            We design one kernel module to hijack the function entry of the driver, and use ``mmap'' to establish a shared-memory communication between kernel and userspace.
+            \item[--] The experiment results show that we could alter a set of parameters (related to channel access priority) within 10 millisecond for 1000 accesses. 
+          \end{itemize}
+          - \cusemph{IP Layer (L3)}: (\href{http://github.com/iamhyc/Netfilter-L4-Encryption}{Github Link})
+          \begin{itemize}
+            \item[--] This project implements an in-stack network data encryption trial based on Linux Netfilter subsystem.
+            It uses \cusemph{asynchronous encryption method AES-128} provided by kernel function, to encrypt the payload of L3 (i.e., content of an IP packet) and decrypt it correspondingly at the receiver’s side.
+            \item[--] This project would be extended with an identification mechanism which allows the tx/rx to negotiate the enabling of en(de)cryption, and a userspace tool based on \cusemph{Linux Netlink subsystem} for key management. 
+          \end{itemize}
         }
     \end{project}
-
+    \\
     \begin{project}
-      \title{VLC-WiFi integrated Network}
+      \title{VLC-WiFi Integrated Communication Platform}
       %\links{\href{https://github.com/rbavishi/iCBMC}{Github Link}}
       \duration{Sep '17 - Dec '18}
       \description{
-        In this project, we implemented a hybrid VLC-WiFi communication system, where the VLC link bears the high-throughput downlink, and Wi-Fi link servers as uplink. We implemented the system on NI instruments with out-of-shelf Wi-Fi NIC, and the retransmission mechanism is implemented on IP layer. The source code of the whole workable system implementation is provided here.
-        % The granted patent is 数据传输方法、装置、设备及存储介质 (CN110429979B).
-        % - Ported the described \emph{Component-Based-Synthesis} algorithm in \href{https://www.comp.nus.edu.sg/~abhik/pdf/ICSE15-directfix.pdf}{DirectFix} to CBMC\\
-        % - Reproduced the experimental results provided in the paper, and devised further optimizations\\
-        % - \href{https://github.com/rbavishi/iCBMC}{Github Link}
+        - In this project, we implemented a hybrid VLC-WiFi communication system, where the VLC link bears the high-throughput downlink, and Wi-Fi link servers as uplink. \\
+        - We implemented the system on NI instruments with out-of-shelf Wi-Fi NIC, and the retransmission mechanism is implemented on IP layer. The source code of the system implementation is provided on \href{https://github.com/iamhyc/CSDS-VLC-TCP}{Github}. We also have one granted patent (CN110429979B) over this platform.
       }
     \end{project}
+    \\
+    \begin{project}
+      \title{SerDe-based Inter-Process Communication (IPC) Framework}
+      \duration{Apr '21 - Present}
+      \description{
+        - This IPC framework is writen in memory-safe Rust language. \cusemph{SerDe} stands for serializing-and-deserializing, which is also the name of a crate developed in Rust. \\
+        - This IPC framework borrows the paradigms from \emph{Android Binder} and \emph{gRPC}, which aims at providing a unified FFI access for \cusemph{any typed-function signatures in any languages}. It currently supports Rust/CPP/Python services. \\
+        - This IPC framework is designed in C/S model, and the backend is in modular design. More specifically, it could support different IPC protocols (e.g., socket, binder) and different {SerDe} methods (e.g., json, ProtoBuf). \\
+        - This IPC framework currently serves as a component of \cusemph{VDM Capability Library} which aims at gathering all best system-related practices. The source code is available on \href{https://github.com/VDM-Maintainer-Group/vdm-capability-library}{Github}.
+      }
+  \end{project}
 
 \end{section}
 
