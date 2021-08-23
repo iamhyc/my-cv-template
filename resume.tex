@@ -138,26 +138,27 @@
 
 \section{Academic Researches}
 \begin{research}
-  \title{Job Dispatching with Outdated-and-Outdated Information in Edge Computing System}
-  \supervisor{Supervisors : Prof. R. Wang, Prof. H. Tan, and Prof. F. C. M. Lau}
+  \title{Job Dispatching with Outdated-and-Partial Information in Edge Computing System}
+  \supervisor{Supervisors: Prof. R. Wang, Prof. H. Tan, and Prof. F. C. M. Lau}
   \duration{Nov '18 - Feb '21}
   \description{
-    - Stale and Outdated Information, POMDP problem formulation \\
-    - alternative update solution framework \\
-    - numerical simulations with Google cluster data trace
+    - We formulated the distributed and cooperative job dispatching problem with outdated nd partial information as a POMDP problem. \\
+    - We proposed a novel low-complexity approximate MDP solution framework via alternative policy iteration, and derived an analytical performance lower bound and a tighter semi-analytical lower bound. \\
+    - We conducted extensive simulations based on the Google Cluster trace, and compare our approach with three
+    heuristic benchmarks. The evaluation results show that our proposed algorithm can achieve as high as 20.67\% reduction in average job response time and consistently perform well under various parameter settings of information staleness.
   }
 \end{research}
 \newpage
 
 \begin{research}
   \title{Online Federated Learning on Mobile Vehicles for 3D Object Detection}
-  \supervisor{Supervisors : Prof. R. Wang and Prof, F. C. M. Lau }
+  \supervisor{Supervisors: Prof. R. Wang and Prof. F. C. M. Lau }
   \duration{Nov '19 - Present}
   \description{
-    - High-fidelity simulation platform CARLA \\
-    - Semi-supervised federated learning with knowledge distillation \\
-    - multiple metric compared, datasets generated, and open-source code with followers \\
-    - Ongoing: Resource allocation for energy-efficient online learning.
+    - We defined a scenario where multiple vehicles equipped with a SECOND network cooperatively collect the 3D object information to the edge server. \\
+    - We developed a semi-supervised federated learning framework, where the fused knowledge at the edge server is transferred to the vehicles with knowledge distillation for model accuracy improvement. \\
+    - We implemented the experiment based on a high-fidelity autonomous driving simulator CARLA, and generated some datasets conformed to the KITTI dataset format. The source code is available on \href{https://github.com/zijianzhang/CARLA_INVS}{Github}. \\
+    - In the extended work, we formulate a resource allocation problem in the above scenario, to achieve both communication and computation efficiency (Hybrid Utilization Maximization) in online federated training.
   }
 \end{research}
 
@@ -169,10 +170,9 @@
 %-------------------------------------------------------------------------------
 %	ACADEMIC PROJECTS SECTION
 %-------------------------------------------------------------------------------
-%FIXME: modify and fill-in
 \begin{section}{Projects}
     \begin{project}
-        \title{SerDe IPC Framework} % VDM
+        \title{SerDe based Inter-Process Communication (IPC) Framework} % VDM
         \duration{Apr '14 - Present}
         \description{
           - Used in VDM \\
