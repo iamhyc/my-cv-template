@@ -90,7 +90,10 @@
 \begin{section}{Education}
     \cusemph{Southern University of Science and Technology (SUSTech)} \\ %, China
     {\sl Bachelor of Engineering} in \cusemph{Communication Engineering}, \timeline{Sep '14 - Jul '18}\\
-    \cusemph{GPA: 3.76/4.00} (Overall)~\cusemph{Ranking: 3/30}\\
+    \cusemph{GPA: 3.76/4.00} (Overall)~\cusemph{Ranking: 3/30}
+    
+    \cusemph{The University of Hong Kong, Hong Kong} \\ %, Chine
+    {\sl Doctor of Philosophy} in \cusemph{Computer Science}, \timeline{Sep '18 - Jul '22} (expected)\\
 \end{section}
 \sectionline
 
@@ -98,15 +101,15 @@
 %      RESEARCH INTERESTS && SKILLS 
 %-------------------------------------------------------------------------------
 \begin{section}{Research Interests}
-  Edge Computing, Network Optimization for Computation Tasks, and Applications of Markov Decision Process (MDP).
+  Edge Computing, Application-Centric Network Optimization, and Applications of Markov Decision Process (MDP).
 \end{section}
 
 \begin{section}{Research Skills}
     \cusemph{Core Courses}: Convex Optimization, Polynomial Optimization, Stochastic Process, Wireless Communications, and Information Theory.
-    \par
+    
     \cusemph{Programming Languages}: Python, Rust, C/C++, Nodejs, TypeScript, and LabVIEW.
     % \LaTeX, Java, HTML/(S)CSS, LabVIEW, Pascal, Arduino.
-    \par
+    
     \cusemph{Toolboxes}: Numba + SciPy + Numpy, PyTorch/TensorFlow.
 \end{section}
 \par\vspace{-2ex}
@@ -133,40 +136,28 @@
 \end{section}
 \sectionline
 
-%FIXME: modify and fill-in
 \section{Academic Researches}
 \begin{research}
-  \title{New Strategy for Analysis of Concurrent Programs via Sequentialization} % Edge Computing
-  \supervisor{Supervisor : Prof. Rui Wang}
-  \duration{Nov '18 - Present}
+  \title{Job Dispatching with Outdated-and-Outdated Information in Edge Computing System}
+  \supervisor{Supervisors : Prof. R. Wang, Prof. H. Tan, and Prof. F. C. M. Lau}
+  \duration{Nov '18 - Feb '21}
   \description{
-    - Using \href{http://users.ecs.soton.ac.uk/gp4/cseq/cseq.html}{CSeq} for code-to-code translation of concurrent programs into equivalent sequential ones\\
-    - Devising solving strategies to reduce verification time on existing backends like {CBMC}
+    - Stale and Outdated Information, POMDP problem formulation \\
+    - alternative update solution framework \\
+    - numerical simulations with Google cluster data trace
   }
 \end{research}
+\newpage
 
 \begin{research}
-  \title{Using SAT/QBF-Solvers to Detect Side-Channel Vulnerabilities in Hardware} % Vehicular Network
-  \supervisor{Supervisors : Prof. Paolo Ienne and Mr. Andrew Becker}
-  \duration{May '16 - Present}
+  \title{Online Federated Learning on Mobile Vehicles for 3D Object Detection}
+  \supervisor{Supervisors : Prof. R. Wang and Prof, F. C. M. Lau }
+  \duration{Nov '19 - Present}
   \description{
-    - Summer internship project at the Processor Architecture Laboratory, EPFL, Switzerland\\
-    - Studied various side-channel attacks, mitigation techniques and their proofs of effectiveness using formal methods\\
-    - Developed a QBF-Encoding technique to verify whether a cryptographic circuit is secure against a popular side-channel attack based on fault-injection\\
-    - In the process of writing a paper and submitting to a peer-reviewed conference\\
-  }
-\end{research}
-% \newpage
-
-\begin{research}
-  \title{Implementation of DirectFix in CBMC} % VLC-WiFi integrated Network
-  \supervisor{Supervisor : Prof. Subhajit Roy}
-  %\links{\href{https://github.com/rbavishi/iCBMC}{Github Link}}
-  \duration{May '15 - Jul '15}
-  \description{
-    - Ported the described \emph{Component-Based-Synthesis} algorithm in \href{https://www.comp.nus.edu.sg/~abhik/pdf/ICSE15-directfix.pdf}{DirectFix} to CBMC\\
-    - Reproduced the experimental results provided in the paper, and devised further optimizations\\
-    - \href{https://github.com/rbavishi/iCBMC}{Github Link}
+    - High-fidelity simulation platform CARLA \\
+    - Semi-supervised federated learning with knowledge distillation \\
+    - multiple metric compared, datasets generated, and open-source code with followers \\
+    - Ongoing: Resource allocation for energy-efficient online learning.
   }
 \end{research}
 
@@ -181,41 +172,51 @@
 %FIXME: modify and fill-in
 \begin{section}{Projects}
     \begin{project}
-        \title{Re-Inventing A Median Algorithm for Disk-Resident Data} % VDM
-        % \supervisor{Supervisor : Prof. Surender Baswana}
-        \duration{Aug '14 - Nov '14}
+        \title{SerDe IPC Framework} % VDM
+        \duration{Apr '14 - Present}
         \description{
-            - Re-invented a two-pass \textit{deterministic} algorithm to find the median of large data-sets (approx. 1 TB)\\
-            - The algorithm developed was similar to the one described in the \href{http://polylogblog.files.wordpress.com/2009/08/80munro-median.pdf}{paper} by Munro-Paterson (1980)\\
-            - Carried out extensive tests to evaluate the performance of the algorithm\\
-            - \href{https://drive.google.com/file/d/0B0--s-r8CTxgZTU3RzB3YnhMMVU/view}{Report}
+          - Used in VDM \\
+          - Written in Rust lang (with safety) \\
+          - Unified FFI accesses for dynamic libraries for C/CPP and Rust and Libraries for Python \\
+          - Decoupled Design for 
+          % - Re-invented a two-pass \textit{deterministic} algorithm to find the median of large data-sets (approx. 1 TB)\\
+          % - The algorithm developed was similar to the one described in the \href{http://polylogblog.files.wordpress.com/2009/08/80munro-median.pdf}{paper} by Munro-Paterson (1980)\\
+          % - Carried out extensive tests to evaluate the performance of the algorithm\\
+          % - \href{https://drive.google.com/file/d/0B0--s-r8CTxgZTU3RzB3YnhMMVU/view}{Report}
         }
     \end{project}
         
     \begin{project}
-        \title{Peer-to-Peer Dropbox} %Netfilter + Netlink
-        % \supervisor{Supervisor : Prof. Subhajit Roy}
-        \duration{Aug '13 - Nov '13}
+        \title{Manipulation of (Wireless) Network Stacks in Linux Kernel} %Netfilter + Netlink + mac80211
+        \duration{Oct '16 - Oct '18}
         \description{
-            - A linux application for backing-up and syncing files between two or more peers\\
-            - Users have a shared folder across different machines, with local copies. Changes made in any one copy are synced across all devices\\
-            - Linux \emph{inotify} API used to track changes in the shared folder and \emph{rsync} used to sync the modifications to ensure efficient transfer\\
-            - Multithreading with mutexes used to parallelize syncing and file-monitoring operations\\
-            - \href{https://github.com/rbavishi/P2P-Dropbox}{Github Link}
+            % - A linux application for backing-up and syncing files between two or more peers\\
+            % - Users have a shared folder across different machines, with local copies. Changes made in any one copy are synced across all devices\\
+            % - Linux \emph{inotify} API used to track changes in the shared folder and \emph{rsync} used to sync the modifications to ensure efficient transfer\\
+            % - Multithreading with mutexes used to parallelize syncing and file-monitoring operations\\
+            % - \href{https://github.com/rbavishi/P2P-Dropbox}{Github Link}
         }
-        \end{project}
+    \end{project}
+
+    \begin{project}
+      \title{VLC-WiFi integrated Network}
+      %\links{\href{https://github.com/rbavishi/iCBMC}{Github Link}}
+      \duration{Sep '17 - Dec '18}
+      \description{
+        In this project, we implemented a hybrid VLC-WiFi communication system, where the VLC link bears the high-throughput downlink, and Wi-Fi link servers as uplink. We implemented the system on NI instruments with out-of-shelf Wi-Fi NIC, and the retransmission mechanism is implemented on IP layer. The source code of the whole workable system implementation is provided here.
+        % The granted patent is 数据传输方法、装置、设备及存储介质 (CN110429979B).
+        % - Ported the described \emph{Component-Based-Synthesis} algorithm in \href{https://www.comp.nus.edu.sg/~abhik/pdf/ICSE15-directfix.pdf}{DirectFix} to CBMC\\
+        % - Reproduced the experimental results provided in the paper, and devised further optimizations\\
+        % - \href{https://github.com/rbavishi/iCBMC}{Github Link}
+      }
+    \end{project}
+
 \end{section}
 
-\vspace{-2ex}
-\sectionline
+% \vspace{-2ex}
+% \sectionline
 %-------------------------------------------------------------------------------
 
-%-------------------------------------------------------------------------------
-%	Interests
-%-------------------------------------------------------------------------------
-% \section{Extra Interests}
-% \cusemph{Project Euler}: Solved : 257/560 \textit{(India Rank : 11)}\\
-% \cusemph{Hobbies}: Competitive Programming, CTF \& Wargames, Quizzing
 
 \end{resume}
 \end{document}

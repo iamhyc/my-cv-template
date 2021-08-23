@@ -705,7 +705,7 @@
   \hfill\textcolor{darkgray}{\textit{\projduration}}
   \vspace{1ex}\\
   \@descriptionbox{\projdesc} %\small\@descriptionbox{\projdesc}
-  \vspace{2ex}\\
+  \vspace{2ex}
 }
 
 \newenvironment{project}{
@@ -719,7 +719,7 @@
   \hfill\textcolor{darkgray}{\textit{\projduration}}
   \vspace{1ex}\\
   \@descriptionbox{\projdesc} %\small\@descriptionbox{\projdesc}
-  \vspace{2ex}\\
+  \vspace{2ex}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
