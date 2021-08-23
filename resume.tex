@@ -73,9 +73,9 @@
 \qualification{PhD Candidate, Computer Science, The University of Hong Kong}
 \emailone{ychong@cs.hku.hk}
 \emailtwo{hongyc@mail.sustech.edu.cn}
-\website{http://iamhyc.github.io}{ \url{iamhyc.github.io} }
+\website{https://iamhyc.github.io}{ \url{iamhyc.github.io} }
 \github{https://github.com/iamhyc}{ \url{github.com/iamhyc} }
-\phone{+86 15811823462}
+\phone{\texttt{+}86 15811823462}
 \address{
     1088 Xueyuan Avenue, \\
     Shenzhen 518055, P.R. China
@@ -92,7 +92,7 @@
     {\sl Bachelor of Engineering} in \cusemph{Communication Engineering}, \timeline{Sep '14 - Jul '18}\\
     \cusemph{GPA: 3.76/4.00} (Overall)~\cusemph{Ranking: 3/30}
     
-    \cusemph{The University of Hong Kong, Hong Kong} \\ %, Chine
+    \cusemph{The University of Hong Kong (HKU)} \\ %, Hong Kong, China
     {\sl Doctor of Philosophy} in \cusemph{Computer Science}, \timeline{Sep '18 - Jul '22} (expected)\\
 \end{section}
 \sectionline
@@ -107,10 +107,10 @@
 \begin{section}{Research Skills}
     \cusemph{Core Courses}: Convex Optimization, Polynomial Optimization, Stochastic Process, Wireless Communications, and Information Theory.
     
-    \cusemph{Programming Languages}: Python, Rust, C/C++, Nodejs, TypeScript, and LabVIEW.
+    \cusemph{Programming Languages}: Python, Rust, C/C\texttt{++}, Nodejs, TypeScript, and LabVIEW.
     % \LaTeX, Java, HTML/(S)CSS, LabVIEW, Pascal, Arduino.
     
-    \cusemph{Toolboxes}: Numba + SciPy + Numpy, PyTorch/TensorFlow.
+    \cusemph{Toolboxes}: Numba \texttt{+} SciPy \texttt{+} Numpy, PyTorch/TensorFlow.
 \end{section}
 \par\vspace{-2ex}
 \sectionline
@@ -142,10 +142,10 @@
   \supervisor{Supervisors: Prof. R. Wang, Prof. H. Tan, and Prof. F. C. M. Lau}
   \duration{Nov '18 - Feb '21}
   \description{
-    - We formulated the distributed and cooperative job dispatching problem with outdated nd partial information as a POMDP problem. \\
-    - We proposed a novel low-complexity approximate MDP solution framework via alternative policy iteration, and derived an analytical performance lower bound and a tighter semi-analytical lower bound. \\
-    - We conducted extensive simulations based on the Google Cluster trace, and compare our approach with three
-    heuristic benchmarks. The evaluation results show that our proposed algorithm can achieve as high as 20.67\% reduction in average job response time and consistently perform well under various parameter settings of information staleness.
+    -- We formulated the distributed and cooperative job dispatching in edge computing system with outdated nd partial information as a POMDP problem. \\
+    -- We proposed a novel low-complexity approximate MDP solution framework via alternative policy iteration, and derived an analytical performance lower bound and a tighter semi-analytical lower bound. \\
+    -- We conducted extensive simulations based on the Google Cluster trace, and compare our approach with three
+    heuristic benchmarks. The evaluation results show that our proposed algorithm can achieve as high as $20.67\%$ reduction in average job response time and consistently perform well under various parameter settings of information staleness.
   }
 \end{research}
 \newpage
@@ -155,10 +155,10 @@
   \supervisor{Supervisors: Prof. R. Wang and Prof. F. C. M. Lau }
   \duration{Nov '19 - Present}
   \description{
-    - We defined a scenario where multiple vehicles equipped with a SECOND network cooperatively collect the 3D object information to the edge server. \\
-    - We developed a semi-supervised federated learning framework, where the fused knowledge at the edge server is transferred to the vehicles with knowledge distillation for model accuracy improvement. \\
-    - We implemented the experiment based on a high-fidelity autonomous driving simulator CARLA, and generated some datasets conformed to the KITTI dataset format. The source code is available on \href{https://github.com/zijianzhang/CARLA_INVS}{Github}. \\
-    - In the extended work, we formulate a resource allocation problem in the above scenario, to achieve both communication and computation efficiency (Hybrid Utilization Maximization) in online federated training.
+    -- We defined a scenario where multiple vehicles equipped with a SECOND network cooperatively collect the 3D object information to the edge server. \\
+    -- We developed a semi-supervised federated learning framework, where the fused knowledge at the edge server is transferred to the vehicles with knowledge distillation for model accuracy improvement. \\
+    -- We implemented the experiment based on a high-fidelity autonomous driving simulator CARLA, and generated some datasets conformed to the KITTI dataset format. The source code is available on \href{https://github.com/zijianzhang/CARLA_INVS}{Github}. \\
+    -- In the extended work, we formulate a resource allocation problem in the above scenario, to achieve both communication and computation efficiency (Hybrid Utilization Maximization) in online federated training.
   }
 \end{research}
 
@@ -172,21 +172,21 @@
 %-------------------------------------------------------------------------------
 \begin{section}{Projects}      
     \begin{project}
-        \title{Manipulation of Networking Stack in Linux Kernel} %Netfilter + Netlink + mac80211
+        \title{Manipulation of Networking Stack in Linux Kernel}
         \duration{Oct '16 - Oct '18}
         \description{
-          - \cusemph{MAC Layer (L2)}: (\href{http://github.com/iamhyc/wlsops-hack}{Github Link})
+          -- \cusemph{MAC Layer (L2)}: (\href{http://github.com/iamhyc/wlsops-hack}{Github Link})
           \begin{itemize}
-            \item[--] This project aims at providing the fastest access to the wireless NIC driver from userspace.
+            \item[-] This project aims at providing a faster and reliable access to the wireless NIC driver from userspace.
             % In fact, Linux mac80211 subsystem provides a set of APIs to monitor and modify the parameters related to IEEE 802.11 MAC design. The existing tools rely on either ``ioctl'' or ``genl'' which could not provide real-time and robust access to kernel driver.
-            We design one kernel module to hijack the function entry of the driver, and use ``mmap'' to establish a shared-memory communication between kernel and userspace.
-            \item[--] The experiment results show that we could alter a set of parameters (related to channel access priority) within 10 millisecond for 1000 accesses. 
+            We design one kernel module to \cusemph{hijack the function entry} of the driver, and use ``mmap'' to establish a shared-memory communication between kernel and userspace.
+            \item[-] The experiment results show that we could alter a set of \cusemph{IEEE 802.11e} parameters (related to the channel access priority) within 10 millisecond for 1000 accesses. 
           \end{itemize}
-          - \cusemph{IP Layer (L3)}: (\href{http://github.com/iamhyc/Netfilter-L4-Encryption}{Github Link})
+          -- \cusemph{IP Layer (L3)}: (\href{http://github.com/iamhyc/Netfilter-L4-Encryption}{Github Link})
           \begin{itemize}
-            \item[--] This project implements an in-stack network data encryption trial based on Linux Netfilter subsystem.
-            It uses \cusemph{asynchronous encryption method AES-128} provided by kernel function, to encrypt the payload of L3 (i.e., content of an IP packet) and decrypt it correspondingly at the receiver’s side.
-            \item[--] This project would be extended with an identification mechanism which allows the tx/rx to negotiate the enabling of en(de)cryption, and a userspace tool based on \cusemph{Linux Netlink subsystem} for key management. 
+            \item[-] This project implements an in-stack network data encryption trial based on Linux Netfilter subsystem.
+            It uses asynchronous encryption method \cusemph{AES-128} provided by Linux kernel, to encrypt the payload of L3 (i.e., content of an IP packet) and decrypt it correspondingly at the receiver’s side.
+            \item[-] This project would be extended with an identification mechanism which allows the tx/rx to negotiate the enabling of en(de)cryption, and a userspace tool based on \cusemph{Linux Netlink subsystem} for key management. 
           \end{itemize}
         }
     \end{project}
@@ -196,8 +196,8 @@
       %\links{\href{https://github.com/rbavishi/iCBMC}{Github Link}}
       \duration{Sep '17 - Dec '18}
       \description{
-        - In this project, we implemented a hybrid VLC-WiFi communication system, where the VLC link bears the high-throughput downlink, and Wi-Fi link servers as uplink. \\
-        - We implemented the system on NI instruments with out-of-shelf Wi-Fi NIC, and the retransmission mechanism is implemented on IP layer. The source code of the system implementation is provided on \href{https://github.com/iamhyc/CSDS-VLC-TCP}{Github}. We also have one granted patent (CN110429979B) over this platform.
+        -- In this project, we implemented a {hybrid VLC-WiFi} communication system, where the VLC link bears the high-throughput downlink, and Wi-Fi link servers as uplink. \\
+        -- We implemented the system on \cusemph{NI instruments} with out-of-shelf \cusemph{Wi-Fi NIC}, and the retransmission mechanism is implemented over IP layer. The source code of the system implementation is provided on \href{https://github.com/iamhyc/CSDS-VLC-TCP}{Github}. We also have one granted patent (CN110429979B) over this platform.
       }
     \end{project}
     \\
@@ -205,10 +205,10 @@
       \title{SerDe-based Inter-Process Communication (IPC) Framework}
       \duration{Apr '21 - Present}
       \description{
-        - This IPC framework is writen in memory-safe Rust language. \cusemph{SerDe} stands for serializing-and-deserializing, which is also the name of a crate developed in Rust. \\
-        - This IPC framework borrows the paradigms from \emph{Android Binder} and \emph{gRPC}, which aims at providing a unified FFI access for \cusemph{any typed-function signatures in any languages}. It currently supports Rust/CPP/Python services. \\
-        - This IPC framework is designed in C/S model, and the backend is in modular design. More specifically, it could support different IPC protocols (e.g., socket, binder) and different {SerDe} methods (e.g., json, ProtoBuf). \\
-        - This IPC framework currently serves as a component of \cusemph{VDM Capability Library} which aims at gathering all best system-related practices. The source code is available on \href{https://github.com/VDM-Maintainer-Group/vdm-capability-library}{Github}.
+        -- This IPC framework is writen in Rust language and the source code is available on \href{https://github.com/VDM-Maintainer-Group/vdm-capability-library}{Github}. (\cusemph{SerDe} stands for serializing and deserializing) \\ %, which is also the name of a crate developed in Rust
+        -- This IPC framework borrows the paradigms from \emph{Android Binder} and \emph{gRPC}, which aims at providing unified FFI access for \cusemph{any typed-function signatures in any languages}. It currently supports Rust/CPP/Python services. \\
+        -- This IPC framework is designed in C/S model, and the backend is in modular design. More specifically, it could support different IPC protocols (e.g., socket, binder) and different {SerDe} methods (e.g., json, ProtoBuf). \\
+        % - This IPC framework currently serves as a component of \cusemph{VDM Capability Library} which aims at gathering all best system-related practices. 
       }
   \end{project}
 
