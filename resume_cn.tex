@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Graduate Curriculum Vitae
+% LaTeX Template
+% Version 1.2 (3/28/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute 
+% (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Modified by:
+% Daniel L Marks <xleafr@gmail.com> 3/28/2015
+% 
+% Further modified by:
+% Rohan Bavishi <rohan.bavishi95@gmail.com> 9/20/2016
+%
+% Important note:
+% This template requires the simple_style.cls file to be in the same directory 
+% as the .tex file. The res.cls file provides the resume style used for 
+% structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You can have multiple style options the legal options ones are:
+%
+%   centered:	the name and address are centered at the top of the page 
+%				(default)
+%
+%   line:		the name is the left with a horizontal line then the address to
+%				the right
+%
+%   overlapped:	the section titles overlap the body text (default)
+%
+%   margin:		the section titles are to the left of the body text
+%		
+%   11pt:		use 11 point fonts instead of 10 point fonts
+%
+%   12pt:		use 12 point fonts instead of 10 point fonts
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[mm]{simple_style_cn}  
+
+% Default font is the helvetica postscript font
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xcolor}
+\hypersetup {
+    colorlinks=true,
+    linkcolor=colorlink,
+    filecolor=magenta,      
+    urlcolor=colorlink,
+}
+\usepackage[left=0.7in, right=2in, top=0.9in]{geometry}
+
+% Increase text height
+\textheight=700pt
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%-------------------------------------------------------------------------------
+\name{洪云聪}
+\qualification{PhD Candidate, Computer Science, The University of Hong Kong}
+\emailone{ychong@cs.hku.hk}
+% \emailtwo{hongyc@mail.sustech.edu.cn}
+\website{https://iamhyc.github.io}{ \url{iamhyc.github.io} }
+\github{https://github.com/iamhyc}{ \url{github.com/iamhyc} }
+\phone{\texttt{+}86 15811823462}
+\address{
+    % 1088 Xueyuan Avenue, \\
+    % Shenzhen 518055, P.R. China
+}
+%-------------------------------------------------------------------------------
+
+\begin{resume}
+
+%-------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%-------------------------------------------------------------------------------
+\begin{section}{教育背景}
+    \cusemph{南方科技大学 (SUSTech)} \\ %, China
+    \cusemph{通信工程} - {\sl 学士} \timeline{2014 - 2018}{~~~~~~~~~~}\\
+    \cusemph{专业GPA: 3.77}/4.00 ~ \cusemph{排名: 3/30}.
+    
+    \cusemph{香港大学 (HKU)} \\ %, Hong Kong, China
+    \cusemph{计算机科学} - {\sl 博士} ~ \timeline{2018 - 2022} (预计)\\
+\end{section}
+\vspace{-2ex}
+\sectionline
+
+%-------------------------------------------------------------------------------
+%      RESEARCH INTERESTS && SKILLS 
+%-------------------------------------------------------------------------------
+\begin{section}{研究方向}
+  边缘计算，面向应用（Application-centric）的网络优化，马尔科夫决策过程（MDP）应用。
+  % Edge Computing, Application-Centric Network Optimization, and Applications of Markov Decision Process (MDP).
+\end{section}
+
+\begin{section}{科研技能}
+    \cusemph{核心课程}: 凸优化，多项式优化，随机过程；无线通信，信息论。
+    \\
+    \cusemph{编程语言}: Python, Rust, C/C\texttt{++}, Nodejs, TypeScript, and LabVIEW。
+    \\
+    % \LaTeX, Java, HTML/(S)CSS, LabVIEW, Pascal, Arduino.
+    \cusemph{仿真工具}: Numba \texttt{+} SciPy \texttt{+} Numpy, PyTorch/TensorFlow。
+\end{section}
+\par\vspace{-2ex}
+\sectionline
+
+%-------------------------------------------------------------------------------
+%       ACHIEVEMENTS && Selected Publications
+%-------------------------------------------------------------------------------
+\begin{section}{个人成就}
+    Awarded \cusemph{Second-class Scholarship and ``Execellent Student''} from 2016 to 2017. \\
+    Awarded \cusemph{Best Track Paper of Algorithm Track} in IEEE MSN, 2020.
+\end{section}
+\vspace{-2ex}
+% \sectionline
+
+\begin{section}{代表论文}
+    [1] \cusemph{Y. Hong}, B. Lv, R. Wang, H. Tan, Z. Han, H. Zhou, F. C. M. Lau, ``{Online Distributed Job Dispatching with Outdated and Partially-Observable Information},'' in \emph{Proc. IEEE MSN, 2020} \cusemph{Best Track Paper Award}. \newline
+    [2] \cusemph{Y. Hong}, B. Lv, R. Wang, H. Tan, Z. Han, F. C. M. Lau, ``{Distributed Job Dispatching in Edge Computing Networks with Random Transmission Latency: A Low-Complexity POMDP Approach},'' in \emph{IEEE Internet of Things Journal}. \newline
+    [3] L. Zhou, \cusemph{Y. Hong}, S. Wang, R. Han, D. Li, R. Wang, and Q. Hao, ``{Learning centric wireless resource allocation for edge computing: Algorithm and experiment},'' \emph{IEEE Transactions on Vehicular Technology}, Jan. 2021.
+    \vspace{-2ex}
+\end{section}
+
+\sectionline
+
+\section{学术研究}
+\begin{research}
+  \title{基于部分与过时信息（Outdated-and-Partial Information）的边缘计算任务调度}
+  \supervisor{指导导师：王锐，谈海生，Prof. Francis C. M. Lau。}
+  \duration{Nov '18 - Feb '21}
+  \description{
+    -- 在这个课题中，我们将边缘计算系统中，具有过时和部分信息的分布式任务调度问题，表述为一个POMDP问题。 \\
+    -- 为了解决MDP求解过程中的维度爆炸（curse of dimensionality）问题，我们提出了一个低复杂度的解决方案，替代策略迭代（alternative policy iteration），并得出了一个解析性能下限和一个更严格的半解析下限。\\
+    -- 基于Google Cluster的公开数据集，我们进行了大量的仿真并将我们的方法和三个启发式算法进行比较。结果显示，我们提出的算法可以实现减少高达$20.67\%$的平均响应时间，并且在信息滞后性的各种参数设置下始终表现良好。
+  }
+\end{research}
+\newpage
+
+\begin{research}
+  \title{在移动车辆上部署用于3D物体检测的在线联邦学习}
+  \supervisor{指导导师：王锐，Prof. Francis C. M. Lau。}
+  \duration{Nov '19 - 现在}
+  \description{
+    -- 在这个课题中，我们首先给出了一个场景，多个配备SECOND网络的车辆将会合作收集道路上的3D物体信息到边缘服务器。\\
+    -- 在这个应用场景下，我们开发了一个半监督（semi-supervised）的联合学习框架，边缘服务器上的融合去噪的物体信息返回给车辆，车辆可以通过这种知识提炼（Knowledge Distillation）的方法进一步提高模型精度。\\
+    -- 我们在高保真自动驾驶模拟器CARLA的基础上进行了实验，并生成了符合KITTI数据集格式的数据集。 源代码可以在Github上找到 \href{https://github.com/zijianzhang/CARLA_INVS}{Github}. \\
+    -- 在后续的扩展工作中，我们提出了上述场景下的资源分配问题，以实现在线联邦学习中的通信和计算效率最大化。
+  }
+\end{research}
+\par\vspace{-7ex}
+\sectionline
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%	ACADEMIC PROJECTS SECTION
+%-------------------------------------------------------------------------------
+\begin{section}{项目经历}      
+    \begin{project}
+        \title{Linux内核中网络堆栈的实践}
+        \duration{Oct '16 - Oct '18}
+        \description{
+          -- \cusemph{MAC Layer (L2)}: (\href{http://github.com/iamhyc/wlsops-hack}{Github Link})
+            在这个项目中，我们提供了对于无线网卡驱动控制更快、更可靠的访问。
+            % In fact, Linux mac80211 subsystem provides a set of APIs to monitor and modify the parameters related to IEEE 802.11 MAC design. The existing tools rely on either ``ioctl'' or ``genl'' which could not provide real-time and robust access to kernel driver.
+            我们设计了一个内核模块来劫持驱动程序的函数入口，并使用``mmap''来建立内核和用户空间之间的共享内存通信。
+            实验结果表明，对于一组\cusemph{IEEE 802.11e}参数（与信道访问优先级有关）的1000次操作，我们可以在10ms内完成。
+          \newline
+          -- \cusemph{IP Layer (L3)}: (\href{http://github.com/iamhyc/Netfilter-L4-Encryption}{Github Link})
+            该项目实现了基于Linux Netfilter子系统的网络数据加解密试验（类似于IPsec）。它使用Linux内核提供的异步加密方法AES-128，对L3的有效载荷（即IP数据包的内容）进行加密，并在接收方进行相应解密。这个项目的扩展工作中会实现一个识别机制，允许Tx/Rx协商启用加解密，以及添加基于Linux Netlink子系统的用户空间工具来管理密钥。
+        }
+    \end{project}
+    \\
+    \begin{project}
+      \title{VLC-WiFi 融合通信平台}
+      %\links{\href{https://github.com/rbavishi/iCBMC}{Github Link}}
+      \duration{Sep '17 - Dec '18}
+      \description{
+        在这个项目中，我们实现了一个混合VLC-WiFi通信系统，其中VLC链接承担高吞吐量的下行链路，Wi-Fi链接服务器作为上行链路。
+        我们基于\cusemph{NI仪器}和USB Wi-Fi网卡实现了该系统，其中重传机制通过IP层实现。系统实现的源代码在\href{https://github.com/iamhyc/CSDS-VLC-TCP}{Github}上提供。该平台上还拥有一项授权专利（CN110429979B）产出。
+      }
+    \end{project}
+    \\
+    \begin{project}
+      \title{基于SerDe机制的IPC（Inter-Process Communication）框架}
+      \duration{Apr '21 - Present}
+      \description{
+        -- 该IPC框架使用Rust语言编写，源代码可以在\href{https://github.com/VDM-Maintainer-Group/vdm-capability-library}{Github}上找到。其中``SerDe''是``serializing-and-deserializing''的意思。\\
+        %, which is also the name of a crate developed in Rust
+        -- 该IPC借鉴了来自\emph{Android Binder}和\emph{gRPC}的优秀实践，旨在提供对于\cusemph{任何语言中任意函数签名}的统一FFI访问（需要有稳定的ABI），目前仅支持 Rust/CPP/Python 的服务。\\
+        -- 该IPC框架采用C/S模型设计，并且后端是模块化的。理论上它可以支持不同的\cusemph{IPC协议}（例如socket，binder）和不同的\cusemph{SerDe机制}（例如json，ProtoBuf）。
+        % - This IPC framework currently serves as a component of \cusemph{VDM Capability Library} which aims at gathering all best system-related practices. 
+      }
+  \end{project}
+
+\end{section}
+
+% \vspace{-2ex}
+% \sectionline
+%-------------------------------------------------------------------------------
+
+
+\end{resume}
+\end{document}
